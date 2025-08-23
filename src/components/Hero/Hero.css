@@ -302,11 +302,12 @@
       width: 280px;
       height: 280px;
     }
+    
   }
   
   @media (max-width: 576px) {
     .hero {
-      padding: 0 8%;
+      padding-top: 130px;
     }
     
     .hero-title {
