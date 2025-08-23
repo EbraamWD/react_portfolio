@@ -1,0 +1,5 @@
+node_modules/
+build/
+.env
+portfolio/node_modules/
+portfolio/node_modules/.cache/
