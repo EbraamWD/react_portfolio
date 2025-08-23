@@ -34,7 +34,7 @@ const Hero = () => {
                     </p>
                     <div className="hero-buttons">
                         <button className="btn btn-primary" onClick={scrollToProjects}>
-                            View my last projects
+                            View my last project
                         </button>
                         <button className="btn btn-secondary" onClick={scrollToContact}>
                             Let's get in touch
