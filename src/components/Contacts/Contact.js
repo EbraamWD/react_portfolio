@@ -39,7 +39,7 @@ const Contact = () => {
                 phone: "",
                 message: ""
             });
-
+            alert("Message sent successfully! I'll contact you soon!");
         } catch(error) {
             console.error("Error adding document: ", error);
             setStatus("Something went wrong. Please try again");

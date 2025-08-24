@@ -7,6 +7,8 @@ import Projects from './components/Projects/Project';
 import Contacts from './components/Contacts/Contact';
 import Skills from './components/Skills/Skills';
 import Certifications from './components/Certifications/Certifications';
+import Game from './components/Game/Game';
+import ExplainingGame from './components/Game/ExplainingGame';
 function App() {
   return (
     <div className="App">
@@ -15,6 +17,7 @@ function App() {
       <Skills />
       <Projects />
       <Certifications />
+      <Game />
       <Contacts />
     </div>
   );
