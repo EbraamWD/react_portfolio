@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import './Project.css';
 import airaImage from '../../images/aira.png';
-
+import prevenGoImage from '../../images/apple-touch-icon.png';
 const Projects = () => {
     const [projects, setProjects] = useState([
         {
@@ -11,13 +11,21 @@ const Projects = () => {
             technologies: ["Node.js", "Express", "MongoDB", "Python", "React", "JavaScript", "HMTL", "CSS", "CI/CD", "Railway", "DeepSeek API"],
             image: airaImage,
             link: "https://aira-production-34f2.up.railway.app/landing.html"
+        },
+        {
+            id: 2,
+            title: "PrevenGo",
+            description: "Web app that creates quotes in zero time for freelancers or small business owners. PrevenGo is a quote generator that allows users to create and manage quotes for their clients easily.",
+            technologies: ["Node.js", "Express", "MongoDB", "React", "JavaScript", "HMTL", "CSS", "CI/CD", "Railway", "Vercel"],
+            image: prevenGoImage,
+            link: "https://preven-go.vercel.app/"
         }
     ]);
 
     return (
         <section id="projects" className="projects">
             <div className="projects-title">
-                <h2>Latest Project</h2>
+                <h2>Latest Projects</h2>
             </div>
             <div className="container">
                 <div className="projects-grid">

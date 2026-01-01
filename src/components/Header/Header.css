@@ -4,24 +4,29 @@
   top: 0;
   left: 0;
   width: 100%;
-  height: 120px;
   background: white;
   display: flex;
+  flex-direction: column;
   align-items: center;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 5px rgba(0,0,0,0.08);
   z-index: 1000;
+  padding: 8px 0;
 }
 
-.container {
+.header > .container {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 100%;
+  width: 95%;
   padding: 0 20px;
+  max-width: 1200px;
+  position: relative;
 }
 
 .logo img {
-  width: 40%;
+  /* use a fixed size for the logo to avoid layout shifts on small screens */
+  width: 48px;
+  height: auto;
 }
 
 /* NAV stile desktop */
@@ -76,5 +81,59 @@
     border: none;
     font-size: 28px;
     cursor: pointer;
+    padding: 6px 10px;
+    line-height: 1;
+    /* pin to right edge of header container */
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1200;
   }
+}
+
+@media (max-width: 480px) {
+  .logo img { width: 40px }
+  .menu-toggle { font-size: 26px; padding: 6px 8px }
+}
+
+/* Header subscription banner */
+.header-subscription {
+  width: 100%;
+  background: linear-gradient(90deg, rgba(79,70,229,0.06), rgba(6,182,212,0.04));
+  border-bottom: 1px solid rgba(15,23,36,0.03);
+  padding: 8px 0;
+  display: flex;
+  align-items: center;
+}
+
+.header-subscription__inner.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+  max-width: 1200px;
+}
+
+.header-subscription .sub-left { color: #0f1724; font-weight:700 }
+.header-subscription .sub-desc { font-weight:600; color:#475569; margin-left:8px }
+
+.btn-sub {
+  background: linear-gradient(135deg,#111827,#1f2937);
+  color:white; padding:8px 12px; border-radius:999px; text-decoration:none; font-weight:800; margin-right:8px;
+}
+.btn-sub-outline { background:transparent; border:1px solid rgba(15,23,36,0.06); padding:6px 10px; border-radius:999px; color:#0f1724; text-decoration:none; font-weight:700 }
+
+@media (max-width: 900px) {
+  /* Increase banner height on mobile and stack CTAs */
+  .header-subscription { padding: 8px 0; }
+  .header-subscription__inner.container { flex-direction: column; align-items:center; text-align:center; gap:8px }
+  .header-subscription .sub-desc { display:block; margin-left:0; margin-top:4px }
+  .btn-sub, .btn-sub-outline { width: 100%; max-width: 340px }
+}
+
+@media (max-width: 480px) {
+  .header-subscription { padding: 8px 0; }
+  .btn-sub, .btn-sub-outline { padding: 8px 10px; font-size: 0.9rem }
 }
