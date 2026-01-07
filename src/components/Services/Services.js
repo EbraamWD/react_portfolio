@@ -136,7 +136,7 @@ const Services = () => {
               <div className="card-header__decoration"></div>
               <h3 className="card-header__title">Landing Page</h3>
               <div className="card-header__price">
-                <span className="price-amount">€1,000</span>
+                <span className="price-amount"> from € 990</span>
               </div>
             </div>
             
@@ -155,7 +155,7 @@ const Services = () => {
               <div className="card-header__decoration"></div>
               <h3 className="card-header__title">MVP</h3>
               <div className="card-header__price">
-                <span className="price-amount">€4,000</span>
+                <span className="price-amount">from €4,000</span>
               </div>
             </div>
             
