@@ -8,8 +8,7 @@ import Services from './components/Services/Services';
 import Contacts from './components/Contacts/Contact';
 import Skills from './components/Skills/Skills';
 import Certifications from './components/Certifications/Certifications';
-import Game from './components/Game/Game';
-import ExplainingGame from './components/Game/ExplainingGame';
+import R3FExamples from './components/R3FExamples';
 function App() {
   return (
     <div className="App">
