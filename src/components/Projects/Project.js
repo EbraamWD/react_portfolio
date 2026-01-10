@@ -16,9 +16,9 @@ const Projects = () => {
             id: 2,
             title: "PrevenGo",
             description: "Web app that creates quotes in zero time for freelancers or small business owners. PrevenGo is a quote generator that allows users to create and manage quotes for their clients easily.",
-            technologies: ["Node.js", "Express", "MongoDB", "React", "JavaScript", "HMTL", "CSS", "CI/CD", "Railway", "Vercel"],
+            technologies: ["Node.js", "Express", "PostgreSQL", "React", "JavaScript", "HMTL", "CSS", "CI/CD", "Railway", "Vercel"],
             image: prevenGoImage,
-            link: "https://preven-go.vercel.app/"
+            link: "https://prevengo.xyz/"
         }
     ]);
 
