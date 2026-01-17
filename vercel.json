@@ -1,8 +1,10 @@
 {
+  "buildCommand": "npm run build",
+  "outputDirectory": "build",
   "rewrites": [
     {
-      "source": "/googlefd9b2bbd8bb454bb.html",
-      "destination": "/googlefd9b2bbd8bb454bb.html"
+      "source": "/(.*)",
+      "destination": "/index.html"
     }
   ]
 }
