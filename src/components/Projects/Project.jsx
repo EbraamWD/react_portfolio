@@ -2,7 +2,7 @@ import { motion } from 'framer-motion';
 import { ExternalLink, Github } from 'lucide-react';
 import airaImage from '../../images/aira.png';
 import prevenGoImage from '../../images/apple-touch-icon.png';
-import sancarloimage from '../../images/sancarlotraslochi.it';
+import sancarloimage from '../../images/sancarlotraslochi.png';
 import './Project.css';
 
 const projects = [
