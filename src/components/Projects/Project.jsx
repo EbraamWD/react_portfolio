@@ -29,7 +29,7 @@ const projects = [
     description:
       'Next.js website built to improve SEO, performance, and organic traffic through server-side rendering and static generation.',
     image: sancarloimage,
-    tags: ['Next.js' 'TypeScript', 'HMTL', 'CSS', 'Vercel'],
+    tags: ['Next.js', 'TypeScript', 'HMTL', 'CSS', 'Vercel'],
     liveUrl: 'http://sancarlotraslochi.it/',
     githubUrl: '#',
   }
