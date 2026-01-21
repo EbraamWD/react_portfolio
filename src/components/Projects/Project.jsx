@@ -2,6 +2,7 @@ import { motion } from 'framer-motion';
 import { ExternalLink, Github } from 'lucide-react';
 import airaImage from '../../images/aira.png';
 import prevenGoImage from '../../images/apple-touch-icon.png';
+import sancarloimage from '../../images/sancarlotraslochi.it';
 import './Project.css';
 
 const projects = [
@@ -21,6 +22,15 @@ const projects = [
     image: prevenGoImage,
     tags: ['Node.js', 'Express', 'PostgreSQL', 'React', 'JavaScript', 'HMTL', 'CSS', 'CI/CD', 'Railway', 'Vercel'],
     liveUrl: 'https://prevengo.xyz/',
+    githubUrl: '#',
+  },
+  {
+    title: 'San Carlo Traslochi',
+    description:
+      'Next.js website built to improve SEO, performance, and organic traffic through server-side rendering and static generation.',
+    image: sancarloimage,
+    tags: ['Next.js' 'TypeScript', 'HMTL', 'CSS', 'Vercel'],
+    liveUrl: 'http://sancarlotraslochi.it/',
     githubUrl: '#',
   }
 ];
