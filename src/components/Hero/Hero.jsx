@@ -1,8 +1,13 @@
 import { ArrowRight, Github, Linkedin, Mail } from 'lucide-react';
 import { motion } from 'framer-motion';
+import { useLanguage } from '../../contexts/LanguageContext.jsx';
+import { useTranslation } from '../../translations/translations.js';
 import './Hero.css';
 
 export function HeroSection() {
+  const { language } = useLanguage();
+  const t = useTranslation(language);
+
   return (
     <section id="hero" className="hero-section">
       <div className="hero-background">
@@ -34,15 +39,15 @@ export function HeroSection() {
               className="hero-title"
             >
               <span className='hero-title-gradient'>
-                Hi, I'm Ebraam
+                {t.hero.greeting}
               </span>
               <br />
               <span className="hero-title-gradient">
-                Full Stack Engineer
+                {t.hero.title}
               </span>
               <br />
               <span className="hero-title-white">
-                Building Digital Experiences
+                {t.hero.subtitle}
               </span>
             </motion.h1>
 
@@ -52,8 +57,7 @@ export function HeroSection() {
               transition={{ delay: 0.4 }}
               className="hero-description"
             >
-              Crafting elegant solutions to complex problems. Specializing in modern web technologies,
-              scalable architecture, and user-centric design.
+              {t.hero.description}
             </motion.p>
 
             <motion.div
@@ -64,14 +68,51 @@ export function HeroSection() {
             >
               <span className="badge-icon">✨</span>
               <span className="badge-text">
-                <strong>Dedicated Monthly Collaboration</strong> — Subscribe for ongoing development and design support
+                <strong>{t.hero.subscriptionBadge}</strong> — {t.hero.subscriptionText}
               </span>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.5 }}
+              className="hero-benefits"
+            >
+              <div className="hero-benefits-grid">
+                <div className="hero-benefit-item">
+                  <div className="hero-benefit-icon">
+                    <span className="hero-benefit-emoji">💰</span>
+                  </div>
+                  <h4 className="hero-benefit-title">{t.services.whySubscription.benefits.predictable.title}</h4>
+                  <p className="hero-benefit-desc">
+                    {t.services.whySubscription.benefits.predictable.description}
+                  </p>
+                </div>
+                <div className="hero-benefit-item">
+                  <div className="hero-benefit-icon">
+                    <span className="hero-benefit-emoji">⚡</span>
+                  </div>
+                  <h4 className="hero-benefit-title">{t.services.whySubscription.benefits.fast.title}</h4>
+                  <p className="hero-benefit-desc">
+                    {t.services.whySubscription.benefits.fast.description}
+                  </p>
+                </div>
+                <div className="hero-benefit-item">
+                  <div className="hero-benefit-icon">
+                    <span className="hero-benefit-emoji">🎯</span>
+                  </div>
+                  <h4 className="hero-benefit-title">{t.services.whySubscription.benefits.flexible.title}</h4>
+                  <p className="hero-benefit-desc">
+                    {t.services.whySubscription.benefits.flexible.description}
+                  </p>
+                </div>
+              </div>
             </motion.div>
 
             <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
-              transition={{ delay: 0.5 }}
+              transition={{ delay: 0.55 }}
               className="hero-buttons"
             >
               <button

@@ -5,12 +5,18 @@ import {
   Cloud,
   Smartphone,
 } from 'lucide-react';
+import { useLanguage } from '../../contexts/LanguageContext.jsx';
+import { useTranslation } from '../../translations/translations.js';
 import './Skills.css';
 
-const skills = [
-  {
-    category: 'Frontend',
-    icon: Code2,
+export function SkillsSection() {
+  const { language } = useLanguage();
+  const t = useTranslation(language);
+
+  const skills = [
+    {
+      category: t.skills.categories.frontend,
+      icon: Code2,
     technologies: [
       { name: 'React', level: 95 },
       { name: 'TypeScript', level: 90 },
@@ -22,7 +28,7 @@ const skills = [
     ],
   },
   {
-    category: 'Backend',
+    category: t.skills.categories.backend,
     icon: Server,
     technologies: [
       { name: 'Node.js', level: 90 },
@@ -35,7 +41,7 @@ const skills = [
     ],
   },
   {
-    category: 'DevOps & Tools',
+    category: t.skills.categories.devops,
     icon: Cloud,
     technologies: [
       { name: 'Docker', level: 85 },
@@ -48,7 +54,7 @@ const skills = [
     ],
   },
   {
-    category: 'AI Intregrations & Mobile',
+    category: t.skills.categories.aiMobile,
     icon: Smartphone,
     technologies: [
       { name: 'AI Integrations', level: 90 },
@@ -61,8 +67,7 @@ const skills = [
   },
 ];
 
-export function SkillsSection() {
-  return (
+return (
     <section id="skills" className="skills-section">
       <div className="skills-background" />
       
@@ -76,11 +81,11 @@ export function SkillsSection() {
         >
           <h2 className="skills-title">
             <span className="skills-title-gradient">
-              Technical Skills
+              {t.skills.title}
             </span>
           </h2>
           <p className="skills-description">
-            A comprehensive toolkit for building modern, scalable applications
+            {t.skills.subtitle}
           </p>
         </motion.div>
 

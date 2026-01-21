@@ -1,77 +1,56 @@
 import { motion } from 'framer-motion';
 import { Code2, Rocket, Zap, TrendingUp, Check } from 'lucide-react';
+import { useLanguage } from '../../contexts/LanguageContext.jsx';
+import { useTranslation } from '../../translations/translations.js';
 import './Services.css';
 
-const plans = [
-  {
-  icon: Code2,
-  name: 'Weekly',
-  price: '€750',
-  period: '/week',
-  description: 'Focused weekly development with clear priorities and fast execution',
-  hours: '1 active task at a time',
-  features: [
-    'Single prioritized task in progress',
-    'Bug fixes or small feature development',
-    'Code reviews & refactoring',
-    'Async communication',
-    'Delivery within the week (scope-dependent)',
-  ],
-  popular: false,
-},
-{
-  icon: TrendingUp,
-  name: 'Growth',
-  price: '€2,400',
-  period: '/month',
-  description: 'Continuous development for teams that need momentum and reliability',
-  hours: 'Up to 2 active tasks in parallel',
-  features: [
-    'Prioritized backlog management',
-    'Feature development & ongoing maintenance',
-    'Performance optimization',
-    'Technical consulting & architecture support',
-    'Weekly sync call',
-    'Slack/Discord integration',
-  ],
-  popular: true,
-},
-  {
-    icon: Zap,
-    name: 'Landing Page',
-    price: '€990',
-    period: '',
-    description: 'Get your startup online with a high-converting landing page',
-    hours: 'One-time project',
-    features: [
-      'Custom design & copywriting',
-      'Responsive development',
-      'SEO optimization',
-      'Analytics integration',
-      'Deployment & hosting setup',
-    ],
-    popular: false,
-  },
-  {
-    icon: Rocket,
-    name: 'MVP',
-    price: '€4,000',
-    period: '',
-    description: 'Launch your product idea fast with a market-ready MVP',
-    hours: 'Complete product delivery',
-    features: [
-      'Product scoping & planning',
-      'UI/UX prototype',
-      'Full-stack development',
-      '1st release deployment',
-      'Technical documentation',
-    ],
-    popular: false,
-  },
-];
-
 export function ServicesSection() {
-  const calendarLink = 'https://calendar.app.google/XAZRnPRSJ8ydW9LU8'; // Google Calendar booking link
+  const { language } = useLanguage();
+  const t = useTranslation(language);
+  const calendarLink = 'https://calendar.app.google/XAZRnPRSJ8ydW9LU8';
+
+  const plans = [
+    {
+      icon: Code2,
+      name: t.services.plans.weekly.name,
+      price: '€750',
+      period: '/week',
+      description: t.services.plans.weekly.description,
+      hours: t.services.plans.weekly.hours,
+      features: t.services.plans.weekly.features,
+      popular: false,
+    },
+    {
+      icon: TrendingUp,
+      name: t.services.plans.growth.name,
+      price: '€2,400',
+      period: '/month',
+      description: t.services.plans.growth.description,
+      hours: t.services.plans.growth.hours,
+      features: t.services.plans.growth.features,
+      popular: true,
+    },
+    {
+      icon: Zap,
+      name: t.services.plans.landing.name,
+      price: '€990',
+      period: '',
+      description: t.services.plans.landing.description,
+      hours: t.services.plans.landing.hours,
+      features: t.services.plans.landing.features,
+      popular: false,
+    },
+    {
+      icon: Rocket,
+      name: t.services.plans.mvp.name,
+      price: '€4,000',
+      period: '',
+      description: t.services.plans.mvp.description,
+      hours: t.services.plans.mvp.hours,
+      features: t.services.plans.mvp.features,
+      popular: false,
+    },
+  ];
   
   return (
     <section id="services" className="services-section">
@@ -86,15 +65,15 @@ export function ServicesSection() {
           className="services-header"
         >
           <div className="services-badge">
-            <span className="services-badge-text">Subscription-Based Development</span>
+            <span className="services-badge-text">{t.services.badge}</span>
           </div>
           <h2 className="services-title">
             <span className="services-title-gradient">
-              Flexible Pricing Plans
+              {t.services.title}
             </span>
           </h2>
           <p className="services-description">
-            Choose a plan that fits your needs. Scale up or down anytime.
+            {t.services.subtitle}
           </p>
         </motion.div>
 
@@ -113,7 +92,7 @@ export function ServicesSection() {
                 {plan.popular && (
                   <div className="service-popular-badge">
                     <div className="service-popular-text">
-                      Most Popular
+                      {t.services.mostPopular}
                     </div>
                   </div>
                 )}
@@ -148,54 +127,13 @@ export function ServicesSection() {
                     className={`btn btn-full ${plan.popular ? 'btn-primary' : 'btn-outline-cyan'}`}
                     onClick={() => window.open(calendarLink, '_blank')}
                   >
-                    Get Started
+                    {t.services.bookCall}
                   </button>
                 </div>
               </motion.div>
             );
           })}
         </div>
-
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.4 }}
-          className="services-info"
-        >
-          <div className="services-info-card">
-            <h3 className="services-info-title">Why Subscription-Based Development?</h3>
-            <div className="services-info-grid">
-              <div className="services-info-item">
-                <div className="services-info-icon">
-                  <span className="services-info-emoji">💰</span>
-                </div>
-                <h4 className="services-info-item-title">Predictable Costs</h4>
-                <p className="services-info-item-desc">
-                  No surprise invoices. Fixed monthly rate for ongoing development.
-                </p>
-              </div>
-              <div className="services-info-item">
-                <div className="services-info-icon">
-                  <span className="services-info-emoji">⚡</span>
-                </div>
-                <h4 className="services-info-item-title">Fast Turnaround</h4>
-                <p className="services-info-item-desc">
-                  Quick iterations and regular deliveries. Stay agile and competitive.
-                </p>
-              </div>
-              <div className="services-info-item">
-                <div className="services-info-icon">
-                  <span className="services-info-emoji">🎯</span>
-                </div>
-                <h4 className="services-info-item-title">Flexible Plans</h4>
-                <p className="services-info-item-desc">
-                  Scale up or pause anytime. No long-term contracts required.
-                </p>
-              </div>
-            </div>
-          </div>
-        </motion.div>
       </div>
     </section>
   );

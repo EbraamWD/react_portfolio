@@ -152,3 +152,91 @@
   height: 1rem;
   margin-right: 0.5rem;
 }
+
+/* Language Selector Styles */
+.language-selector {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  background: rgba(6, 182, 212, 0.1);
+  border-radius: 0.5rem;
+  border: 1px solid rgba(6, 182, 212, 0.2);
+  transition: all 0.3s ease;
+}
+
+.language-selector:hover {
+  background: rgba(6, 182, 212, 0.15);
+  border-color: rgba(6, 182, 212, 0.3);
+}
+
+.language-icon {
+  color: #22d3ee;
+}
+
+.language-btn {
+  background: transparent;
+  border: none;
+  color: #cbd5e1;
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.25rem;
+  transition: all 0.3s ease;
+}
+
+.language-btn:hover {
+  color: #22d3ee;
+  background: rgba(6, 182, 212, 0.1);
+}
+
+.language-btn.active {
+  color: #22d3ee;
+  font-weight: 700;
+  background: rgba(6, 182, 212, 0.2);
+}
+
+.language-divider {
+  color: rgba(203, 213, 225, 0.3);
+  font-size: 0.875rem;
+}
+
+.language-selector-mobile {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 1rem;
+  margin-top: 1rem;
+  background: rgba(6, 182, 212, 0.1);
+  border-radius: 0.5rem;
+  border: 1px solid rgba(6, 182, 212, 0.2);
+}
+
+.language-selector-mobile .language-icon {
+  color: #22d3ee;
+}
+
+.language-selector-mobile .language-btn {
+  background: transparent;
+  border: none;
+  color: #cbd5e1;
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+  padding: 0.25rem 0.75rem;
+  border-radius: 0.25rem;
+  transition: all 0.3s ease;
+}
+
+.language-selector-mobile .language-btn:hover {
+  color: #22d3ee;
+  background: rgba(6, 182, 212, 0.1);
+}
+
+.language-selector-mobile .language-btn.active {
+  color: #22d3ee;
+  font-weight: 700;
+  background: rgba(6, 182, 212, 0.2);
+}

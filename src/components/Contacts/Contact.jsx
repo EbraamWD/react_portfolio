@@ -1,9 +1,13 @@
 import { motion } from 'framer-motion';
 import { Mail, MapPin, Github, Linkedin } from 'lucide-react';
+import { useLanguage } from '../../contexts/LanguageContext.jsx';
+import { useTranslation } from '../../translations/translations.js';
 import './ContactSection.css';
 
 export function ContactSection() {
-  const calendarLink = 'https://calendar.app.google/XAZRnPRSJ8ydW9LU8'; // Your Google Calendar link
+  const { language } = useLanguage();
+  const t = useTranslation(language);
+  const calendarLink = 'https://calendar.app.google/XAZRnPRSJ8ydW9LU8';
 
   return (
     <section id="contact" className="contact-section">
@@ -20,11 +24,11 @@ export function ContactSection() {
         >
           <h2 className="contact-title">
             <span className="contact-title-gradient">
-              Let's Work Together
+              {t.contact.title}
             </span>
           </h2>
           <p className="contact-description">
-            Have a project in mind? Let's discuss how we can collaborate
+            {t.contact.subtitle}
           </p>
         </motion.div>
 
@@ -37,9 +41,9 @@ export function ContactSection() {
             className="contact-cta-column"
           >
             <div className="contact-cta-card">
-              <h3 className="contact-cta-title">Schedule a Call</h3>
+              <h3 className="contact-cta-title">{t.contact.cta.title}</h3>
               <p className="contact-cta-description">
-                The best way to discuss your project is over a video call. Click below to book a time that works for you.
+                {t.contact.cta.description}
               </p>
               <a
                 href={calendarLink}
@@ -47,7 +51,7 @@ export function ContactSection() {
                 rel="noopener noreferrer"
                 className="btn btn-primary btn-lg btn-full"
               >
-                Book a Call
+                {t.contact.cta.button}
               </a>
             </div>
           </motion.div>
@@ -60,14 +64,14 @@ export function ContactSection() {
             className="contact-info-column"
           >
             <div className="contact-info-card">
-              <h3 className="contact-info-title">Get in Touch</h3>
+              <h3 className="contact-info-title">{t.contact.info.title}</h3>
 
               <div className="contact-info-item">
                 <div className="contact-icon-wrapper">
                   <Mail className="contact-icon" />
                 </div>
                 <div>
-                  <h4 className="contact-info-label">Email</h4>
+                  <h4 className="contact-info-label">{t.contact.info.email}</h4>
                   <a
                     href="mailto:ebraam.saad@gmail.it"
                     className="contact-info-link"
@@ -82,14 +86,14 @@ export function ContactSection() {
                   <MapPin className="contact-icon" />
                 </div>
                 <div>
-                  <h4 className="contact-info-label">Location</h4>
-                  <p className="contact-info-text">Milan, Italy</p>
+                  <h4 className="contact-info-label">{t.contact.info.location}</h4>
+                  <p className="contact-info-text">{t.contact.info.locationValue}</p>
                 </div>
               </div>
             </div>
 
             <div className="contact-social-card">
-              <h3 className="contact-info-title">Connect with Me</h3>
+              <h3 className="contact-info-title">{t.contact.info.connect}</h3>
               <div className="contact-social-links">
                 <a
                   href="https://github.com/EbraamWD/"
@@ -113,10 +117,10 @@ export function ContactSection() {
             <div className="contact-availability">
               <div className="availability-header">
                 <div className="availability-indicator" />
-                <span className="availability-text">Currently Available</span>
+                <span className="availability-text">{t.contact.info.availability}</span>
               </div>
               <p className="availability-desc">
-                Open to new projects and collaborations
+                {t.contact.info.availabilityDesc}
               </p>
             </div>
           </motion.div>

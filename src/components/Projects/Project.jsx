@@ -1,33 +1,36 @@
 import { motion } from 'framer-motion';
 import { ExternalLink, Github } from 'lucide-react';
+import { useLanguage } from '../../contexts/LanguageContext.jsx';
+import { useTranslation } from '../../translations/translations.js';
 import airaImage from '../../images/aira.png';
 import prevenGoImage from '../../images/apple-touch-icon.png';
 import sancarloimage from '../../images/sancarlotraslochi.png';
 import './Project.css';
 
-const projects = [
-  {
-    title: 'AIRA',
-    description:
-      'AI powered extension + dashboard for recruiters. Increase recruiters productivity to scan CV\'s with AI reducing time wasting reading all the candidates CV.',
+export function ProjectsSection() {
+  const { language } = useLanguage();
+  const t = useTranslation(language);
+
+  const projects = [
+    {
+      title: t.projects.aira.title,
+      description: t.projects.aira.description,
     image: airaImage,
     tags: ["Node.js", "Express", "MongoDB", "Python", "React", "JavaScript", "HMTL", "CSS", "CI/CD", "Railway", "DeepSeek API"],
     liveUrl: 'https://aira-production-34f2.up.railway.app/landing.html',
     githubUrl: '#',
   },
   {
-    title: 'PrevenGo',
-    description:
-      'Web app that creates quotes in zero time for freelancers or small business owners. PrevenGo is a quote generator that allows users to create and manage quotes for their clients easily.',
+    title: t.projects.prevengo.title,
+    description: t.projects.prevengo.description,
     image: prevenGoImage,
     tags: ['Node.js', 'Express', 'PostgreSQL', 'React', 'JavaScript', 'HMTL', 'CSS', 'CI/CD', 'Railway', 'Vercel'],
     liveUrl: 'https://prevengo.xyz/',
     githubUrl: '#',
   },
   {
-    title: 'San Carlo Traslochi',
-    description:
-      'Next.js website built to improve SEO, performance, and organic traffic through server-side rendering and static generation.',
+    title: t.projects.sancarlo.title,
+    description: t.projects.sancarlo.description,
     image: sancarloimage,
     tags: ['Next.js', 'TypeScript', 'HMTL', 'CSS', 'Vercel'],
     liveUrl: 'https://sancarlotraslochi.it/',
@@ -35,8 +38,7 @@ const projects = [
   }
 ];
 
-export function ProjectsSection() {
-  return (
+return (
     <section id="projects" className="projects-section">
       <div className="projects-glow projects-glow-1" />
       <div className="projects-glow projects-glow-2" />
@@ -51,11 +53,11 @@ export function ProjectsSection() {
         >
           <h2 className="projects-title">
             <span className="projects-title-gradient">
-              Featured Projects
+              {t.projects.title}
             </span>
           </h2>
           <p className="projects-description">
-            A selection of recent work showcasing modern web development and creative problem-solving
+            {t.projects.subtitle}
           </p>
         </motion.div>
 
@@ -85,7 +87,7 @@ export function ProjectsSection() {
                     className="btn btn-primary btn-sm"
                   >
                     <ExternalLink className="icon-xs" />
-                    Live Demo
+                    {t.projects.liveDemo}
                   </a>
                   <a 
                     href={project.githubUrl} 
@@ -95,7 +97,7 @@ export function ProjectsSection() {
                   >
                     {project.githubUrl !== '#' && <Github className="icon-xs" />}
                     <Github className="icon-xs" />
-                    Code
+                    {t.projects.code}
                   </a>
                 </div>
               </div>
@@ -130,7 +132,7 @@ export function ProjectsSection() {
             className="btn btn-outline-cyan btn-lg"
           >
             <Github className="icon-sm" />
-            View All Projects on GitHub
+            {t.projects.viewAllProjects}
           </a>
         </motion.div>
       </div>
