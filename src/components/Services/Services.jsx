@@ -23,7 +23,7 @@ export function ServicesSection() {
     {
       icon: TrendingUp,
       name: t.services.plans.growth.name,
-      price: '€2,400',
+      price: '€2,500',
       period: '/month',
       description: t.services.plans.growth.description,
       hours: t.services.plans.growth.hours,
@@ -33,7 +33,7 @@ export function ServicesSection() {
     {
       icon: Zap,
       name: t.services.plans.landing.name,
-      price: '€990',
+      price: 'from €990',
       period: '',
       description: t.services.plans.landing.description,
       hours: t.services.plans.landing.hours,
@@ -43,7 +43,7 @@ export function ServicesSection() {
     {
       icon: Rocket,
       name: t.services.plans.mvp.name,
-      price: '€4,000',
+      price: 'from €4,000',
       period: '',
       description: t.services.plans.mvp.description,
       hours: t.services.plans.mvp.hours,
