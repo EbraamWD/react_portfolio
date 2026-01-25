@@ -89,16 +89,6 @@ return (
                     <ExternalLink className="icon-xs" />
                     {t.projects.liveDemo}
                   </a>
-                  <a 
-                    href={project.githubUrl} 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                    className="btn btn-secondary btn-sm"
-                  >
-                    {project.githubUrl !== '#' && <Github className="icon-xs" />}
-                    <Github className="icon-xs" />
-                    {t.projects.code}
-                  </a>
                 </div>
               </div>
 
