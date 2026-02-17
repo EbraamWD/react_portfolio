@@ -76,7 +76,7 @@ export function ContactSection() {
                     href="mailto:ebraam.saad@gmail.com"
                     className="contact-info-link"
                   >
-                    ebraam.saad@gmail.it
+                    ebraam.saad@gmail.com
                   </a>
                 </div>
               </div>
