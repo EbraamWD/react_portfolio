@@ -73,10 +73,10 @@ export function ContactSection() {
                 <div>
                   <h4 className="contact-info-label">{t.contact.info.email}</h4>
                   <a
-                    href="mailto:ebraam.saad@gmail.it"
+                    href="mailto:ebraam.saad@gmail.com"
                     className="contact-info-link"
                   >
-                    ebraam.saad@gmail.it
+                    ebraam.saad@gmail.com
                   </a>
                 </div>
               </div>
