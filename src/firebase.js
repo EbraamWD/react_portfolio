@@ -1,12 +1,9 @@
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
 import { getFirestore } from "firebase/firestore";
-import { getAnalytics } from "firebase/analytics";
-// TODO: Add SDKs for Firebase products that you want to use
-// https://firebase.google.com/docs/web/setup#available-libraries
+import { getAnalytics, setAnalyticsCollectionEnabled } from "firebase/analytics";
 
 // Your web app's Firebase configuration
-// For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
   apiKey: "AIzaSyB5RMXno2kl7-H5nWazrFJbMwb-hEGWNuE",
   authDomain: "dev-portfolio-cf631.firebaseapp.com",
@@ -19,5 +16,22 @@ const firebaseConfig = {
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
-const analytics = getAnalytics(app);
 export const db = getFirestore(app);
+
+// Analytics is initialized but collection is disabled by default (GDPR).
+// It is only enabled after the user explicitly accepts cookies.
+let analytics = null;
+try {
+  analytics = getAnalytics(app);
+  setAnalyticsCollectionEnabled(analytics, false);
+} catch {
+  // analytics unavailable (e.g. SSR)
+}
+
+export function enableAnalytics() {
+  if (analytics) setAnalyticsCollectionEnabled(analytics, true);
+}
+
+export function disableAnalytics() {
+  if (analytics) setAnalyticsCollectionEnabled(analytics, false);
+}

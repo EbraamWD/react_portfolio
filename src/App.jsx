@@ -5,6 +5,7 @@ import { ProjectsSection } from './components/Projects/Project.jsx';
 import { ServicesSection } from './components/Services/Services.jsx';
 import { ContactSection } from './components/Contacts/Contact.jsx';
 import { HowItWorksSection } from './components/HowItWorks/HowItWorksSection.jsx';
+import { CookieConsent } from './components/CookieConsent/CookieConsent.jsx';
 import { LanguageProvider } from './contexts/LanguageContext.jsx';
 import './App.css';
 
@@ -21,6 +22,7 @@ export default function App() {
           <ServicesSection />
           <ContactSection />
         </main>
+        <CookieConsent />
       </div>
     </LanguageProvider>
   );
