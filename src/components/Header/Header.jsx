@@ -31,7 +31,7 @@ export function Header() {
     { label: t.nav.home, id: 'hero' },
     { label: t.nav.skills, id: 'skills' },
     { label: t.nav.projects, id: 'projects' },
-    { label: t.nav.services, id: 'services' },
+    { label: t.nav.howItWorks, id: 'how-it-works' },
     { label: t.nav.contact, id: 'contact' },
   ];
 

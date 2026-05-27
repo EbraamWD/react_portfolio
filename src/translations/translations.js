@@ -5,6 +5,7 @@ export const translations = {
       home: 'Home',
       skills: 'Skills',
       projects: 'Projects',
+      howItWorks: 'How It Works',
       services: 'Services',
       contact: 'Contact',
     },
@@ -14,10 +15,12 @@ export const translations = {
       title: 'Full Stack Engineer',
       subtitle: 'Building Digital Experiences',
       description: 'Crafting elegant solutions to complex problems. Specializing in modern web technologies, scalable architecture, and user-centric design.',
-      subscriptionBadge: 'Dedicated Monthly Collaboration',
-      subscriptionText: 'Subscribe for ongoing development and design support',
+      subscriptionBadge: 'Available for New Projects',
+      subscriptionText: "Let's build your next digital product together",
       viewWork: 'View My Work',
       getInTouch: 'Get in Touch',
+      viewServices: 'View Services',
+      howItWorksBtn: 'How It Works',
     },
     // Skills Section
     skills: {
@@ -53,16 +56,16 @@ export const translations = {
     // How It Works Section
     howItWorks: {
       badge: 'Simple and transparent process',
-      title: 'How the Subscription Model Works',
-      subtitle: 'The subscription model is new here in Italy. I\'ll guide you step by step to start working together in a simple and fast way.',
+      title: 'How We Work Together',
+      subtitle: 'A clear, collaborative process from brief to deployment. Here\'s how we go from your first message to production-ready code.',
       steps: {
         step1: {
-          title: 'Subscribe to a Plan',
-          description: 'Choose the plan that best fits your needs and complete the subscription in just a few clicks.',
+          title: 'Share Your Project',
+          description: 'Tell me about your idea, goals, and timeline. We\'ll define the scope and the best technical approach together.',
         },
         step2: {
-          title: 'Receive Onboarding Email',
-          description: 'After subscribing, you\'ll receive an email with instructions to give me access to your project repositories, messaging app (e.g. Slack), and task management tool (e.g. Linear).',
+          title: 'Kickoff & Setup',
+          description: 'Once aligned on scope and timeline, you\'ll receive instructions to set up collaboration tools: repository access, messaging app, and task management.',
         },
         step3: {
           title: 'Assign Tasks',
@@ -76,15 +79,15 @@ export const translations = {
       },
       cta: {
         title: 'Ready to Get Started?',
-        description: 'Choose the right plan and start receiving quality code in just a few days',
-        button: 'View Available Plans',
+        description: 'Ready to start? Get in touch and let\'s turn your idea into reality.',
+        button: 'Get in Touch',
       },
     },
     // Services Section
     services: {
-      badge: 'Subscription-Based Development',
-      title: 'Flexible Pricing Plans',
-      subtitle: 'Choose a plan that fits your needs. Scale up or down anytime.',
+      badge: 'Full Stack Development',
+      title: 'Services & Pricing',
+      subtitle: 'Clear-scope projects with transparent pricing. From single features to complete product launches.',
       mostPopular: 'Most Popular',
       bookCall: 'Book a Call',
       plans: {
@@ -139,19 +142,19 @@ export const translations = {
         },
       },
       whySubscription: {
-        title: 'Why Subscription-Based Development?',
+        title: 'Why Work With Me?',
         benefits: {
           predictable: {
-            title: 'Predictable Costs',
-            description: 'No surprise invoices. Fixed monthly rate for ongoing development. You pay, I start immediately.',
+            title: 'Clean Code',
+            description: 'Well-structured, documented code that your team can maintain and build on with confidence.',
           },
           fast: {
             title: 'Fast Turnaround',
             description: 'Quick iterations and regular deliveries. Stay agile and competitive.',
           },
           flexible: {
-            title: 'Flexible Plans',
-            description: 'Scale up or pause anytime. No long-term contracts required.',
+            title: 'Clear Communication',
+            description: 'Regular updates, async-friendly workflow, and transparent pricing. No surprises, ever.',
           },
         },
       },
@@ -228,6 +231,7 @@ export const translations = {
       home: 'Home',
       skills: 'Competenze',
       projects: 'Progetti',
+      howItWorks: 'Come Funziona',
       services: 'Servizi',
       contact: 'Contatti',
     },
@@ -237,10 +241,12 @@ export const translations = {
       title: 'Full Stack Engineer',
       subtitle: 'Costruisco Esperienze Digitali',
       description: 'Creo soluzioni eleganti per problemi complessi. Specializzato in tecnologie web moderne, architetture scalabili e design centrato sull\'utente.',
-      subscriptionBadge: 'Collaborazione Mensile Dedicata',
-      subscriptionText: 'Abbonati per supporto continuo nello sviluppo e nel design',
+      subscriptionBadge: 'Disponibile per Nuovi Progetti',
+      subscriptionText: 'Costruiamo insieme il tuo prossimo prodotto digitale',
       viewWork: 'Vedi i Miei Lavori',
       getInTouch: 'Contattami',
+      viewServices: 'Vedi i Servizi',
+      howItWorksBtn: 'Come Funziona',
     },
     // Skills Section
     skills: {
@@ -276,16 +282,16 @@ export const translations = {
     // How It Works Section
     howItWorks: {
       badge: 'Processo semplice e trasparente',
-      title: 'Come Funziona il Modello ad Abbonamento',
-      subtitle: 'Il modello ad abbonamento è nuovo qui in Italia. Ti guiderò passo dopo passo per iniziare a lavorare insieme in modo semplice e veloce.',
+      title: 'Come Lavoriamo Insieme',
+      subtitle: 'Un processo chiaro e collaborativo dal brief al deployment. Ecco come passiamo dal tuo primo messaggio al codice pronto per la produzione.',
       steps: {
         step1: {
-          title: 'Sottoscrivi un Piano',
-          description: 'Scegli il piano che meglio si adatta alle tue esigenze e completa l\'abbonamento in pochi click.',
+          title: 'Raccontami il Progetto',
+          description: 'Parlami della tua idea, degli obiettivi e delle tempistiche. Definiremo insieme lo scope e il miglior approccio tecnico.',
         },
         step2: {
-          title: 'Ricevi l\'Email di Onboarding',
-          description: 'Dopo l\'abbonamento, riceverai un\'email con le istruzioni per darmi accesso ai tuoi repository del progetto, all\'app di messaggistica (es. Slack) e allo strumento di gestione task (es. Linear).',
+          title: 'Kickoff e Setup',
+          description: 'Una volta allineati su scope e tempistiche, riceverai le istruzioni per configurare gli strumenti di collaborazione: accesso al repository, app di messaggistica e gestione task.',
         },
         step3: {
           title: 'Assegna i Task',
@@ -299,15 +305,15 @@ export const translations = {
       },
       cta: {
         title: 'Pronto per Iniziare?',
-        description: 'Scegli il piano giusto e inizia a ricevere codice di qualità in pochi giorni',
-        button: 'Vedi i Piani Disponibili',
+        description: 'Pronto per iniziare? Contattami e trasformiamo la tua idea in realtà.',
+        button: 'Contattami',
       },
     },
     // Services Section
     services: {
-      badge: 'Sviluppo ad Abbonamento',
-      title: 'Piani Tariffari Flessibili',
-      subtitle: 'Scegli un piano che si adatta alle tue esigenze. Aumenta o riduci in qualsiasi momento.',
+      badge: 'Sviluppo Full Stack',
+      title: 'Servizi e Prezzi',
+      subtitle: 'Progetti a scope definito con prezzi trasparenti. Da singole funzionalità a lanci di prodotto completi.',
       mostPopular: 'Più Popolare',
       bookCall: 'Prenota una Chiamata',
       plans: {
@@ -362,19 +368,19 @@ export const translations = {
         },
       },
       whySubscription: {
-        title: 'Perché lo Sviluppo ad Abbonamento?',
+        title: 'Perché Lavorare Con Me?',
         benefits: {
           predictable: {
-            title: 'Costi Prevedibili',
-            description: 'Nessuna fattura a sorpresa. Tariffa mensile fissa per lo sviluppo continuo. Tu paghi, io inizio subito.',
+            title: 'Codice Pulito',
+            description: 'Codice ben strutturato e documentato che il tuo team può mantenere e sviluppare con sicurezza.',
           },
           fast: {
             title: 'Consegna Rapida',
             description: 'Iterazioni veloci e consegne regolari. Rimani agile e competitivo.',
           },
           flexible: {
-            title: 'Piani Flessibili',
-            description: 'Aumenta o metti in pausa in qualsiasi momento. Nessun contratto a lungo termine richiesto.',
+            title: 'Comunicazione Chiara',
+            description: 'Aggiornamenti regolari, workflow async-friendly e prezzi trasparenti. Nessuna sorpresa.',
           },
         },
       },

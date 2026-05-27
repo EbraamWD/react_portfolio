@@ -118,17 +118,19 @@ export function HeroSection() {
               <button
                 className="btn btn-primary btn-lg"
                 onClick={() =>
-                  document.getElementById('services')?.scrollIntoView({ behavior: 'smooth' })
+                  document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })
                 }
               >
-                Explore Plans
+                {t.hero.getInTouch}
                 <ArrowRight className="icon-sm" />
               </button>
               <button
                 className="btn btn-secondary btn-lg"
-                onClick={() => window.open('https://calendar.app.google/XAZRnPRSJ8ydW9LU8', '_blank')}
+                onClick={() =>
+                  document.getElementById('how-it-works')?.scrollIntoView({ behavior: 'smooth' })
+                }
               >
-                Let's Connect
+                {t.hero.howItWorksBtn}
               </button>
             </motion.div>
 

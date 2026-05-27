@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { CreditCard, Mail, ClipboardList, Code, Sparkles } from 'lucide-react';
+import { Briefcase, Mail, ClipboardList, Code, Sparkles } from 'lucide-react';
 import { useLanguage } from '../../contexts/LanguageContext.jsx';
 import { useTranslation } from '../../translations/translations.js';
 import './HowItWorksSection.css';
@@ -11,7 +11,7 @@ export function HowItWorksSection() {
   const steps = [
     {
       number: '01',
-      icon: CreditCard,
+      icon: Briefcase,
       title: t.howItWorks.steps.step1.title,
       description: t.howItWorks.steps.step1.description,
       color: 'cyan',
@@ -125,7 +125,7 @@ export function HowItWorksSection() {
             <button
               className="btn btn-primary btn-cta"
               onClick={() =>
-                document.getElementById('services')?.scrollIntoView({ behavior: 'smooth' })
+                document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })
               }
             >
               {t.howItWorks.cta.button}
